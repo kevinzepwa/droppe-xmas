@@ -1,20 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Products from "./components/Products";
+import data from "./data.json"
 
-function App() {
-  return (
-    <div className="grid-container">
+class App extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      products: data.products,
+      size: "",
+      sort: "",
+    };
+  }
+
+  render() {
+    return (
+     <div className="grid-container">
       <header className="App-header">
         <a href="/">Droppe X-mas</a> 
-      </header>
+      </header> 
       <main>
-        Product list
+        <div className="content">
+          <div className="main">
+            <Products products={this.state.products}></Products>
+          </div>
+          <div className="sidebar">
+            Cart items
+          </div>
+        </div>
       </main>
       <footer>
         brewed by devKev
       </footer>
     </div>
   );
+}
 }
 
 export default App;
