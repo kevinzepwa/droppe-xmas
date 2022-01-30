@@ -1,8 +1,8 @@
-## Droppe X-mas
+# Droppe X-mas
 
 - A Custom design Shopping Cart made using HTML, CSS & ReactJs.
 
-# Getting Started with This App
+## Getting Started with This App
 
 To run on the local develpoment server, you need to install npm and node.
 
@@ -13,10 +13,10 @@ To run on the local develpoment server, you need to install npm and node.
 
     The page will reload when you make changes.
 
-## See it [Live](http://.....)
+## See it [Live](https://droppe-gift-cart.netlify.app/)
 
 ## Screenshot
-<img src="https://....." />
+<img src="./src/droppe-screenshot.png" />
 
 
 ### Flow
@@ -44,4 +44,4 @@ To run on the local develpoment server, you need to install npm and node.
 
 ### Deployment
 
-This project was deployed on Netlify. Visit the site on: [Live](http://.....)
+This project was deployed on Netlify. Visit the site on: [Live](https://droppe-gift-cart.netlify.app/)
