@@ -4,8 +4,9 @@
         "es2021": true
     },
     "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "airbnb", 
+        "prettier"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -15,8 +16,31 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react", "prettier"
     ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+      },
+    "editor.defaultFormatter": null,
+  // JavaScript specific settings:
+    "[javascript]": {
+    // disable prettier
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "rules": {
+        "prettier/prettier": 
+            "warn",
+        "arrow-body-style": 
+            "off",
+        "prefer-arrow-callback": 
+            "off",
+        "no-unused-vars": [
+            "error",
+            {
+              "vars": "local",
+              "args": "none"
+            }
+          ]
     }
 }
+

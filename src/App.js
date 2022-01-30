@@ -15,8 +15,38 @@ export default function App(props) {
     const [count, setCount] = useState([])
     const [cartProducts, setCartProducts] = useState([])
     const [approvedProducts, setApprovedProducts] = useState([])
-    const [sumValue, setSumValue] = useState([0])
+    const [submitted, setSubmitted] = useState(false)
   
+    const checkOut = () => {
+      console.log(approvedProducts)
+      const today = new Date().toISOString().slice(0, 10)
+
+      const removedEmpties = approvedProducts.filter(n => n)
+      const payloadList = approvedProducts.map(products => ({
+        userId: products[0].userId,
+        date: today,
+        products: products
+      }))
+    
+      try {
+        payloadList.forEach((payload) => fetch('https://fakestoreapi.com/carts',{
+          method:"POST",
+          body:JSON.stringify(
+              {
+                  userId:5,
+                  date: today,
+                  products:[{productId:5,quantity:1},{productId:1,quantity:5}]
+              }
+          )
+        })
+            .then(res=>res.json())
+            .then(json=> setSubmitted(true))
+        )
+      } catch (error) {
+        console.log("error", error)
+      }
+
+    }
      
     const approveItem = (product, cartNumber) => {
       const approvedProductsCopy = [...approvedProducts]
@@ -27,12 +57,31 @@ export default function App(props) {
          approvedProductsCopy[cartNumber].push(product)
        }
        setApprovedProducts(approvedProductsCopy)
-       //console.log(approvedProducts[cartNumber])
        };
-     
-     const removeItem = (product, index) => {
+
+      
+    const increaseQuantity = (product, cartCount, index) => {
+      const approvedProductsCopy = [...approvedProducts]
+      approvedProductsCopy[cartCount][index].quantity += 1
+      setApprovedProducts(approvedProductsCopy)
+
+    }
+    
+    const decreaseQuantity = (product, cartCount, index) => {
+      const approvedProductsCopy = [...approvedProducts]
+      if (approvedProductsCopy[cartCount][index].quantity > 0) {
+      approvedProductsCopy[cartCount][index].quantity -= 1
+      }
+      if (approvedProductsCopy[cartCount][index].quantity <= 0) {
+        removeItem(product, cartCount, index)
+      }
+      setApprovedProducts(approvedProductsCopy)
+
+    }
+
+     const removeItem = (product, cartCount, index) => {
        const approvedProductsCopy = [...approvedProducts]
-       approvedProductsCopy[0].splice(index, 1)
+       approvedProductsCopy[cartCount].splice(index, 1)
        setApprovedProducts(approvedProductsCopy)
      };
        
@@ -54,15 +103,23 @@ export default function App(props) {
          const newCart = carts.map((cart) => {
            return(cart.products.map((product) => {
              const newProduct = products.find(innerProduct => innerProduct.id === product.productId)
-             newProduct.quantity = product.quantity
-             return(newProduct)
+             product.category = newProduct.category
+             product.description = newProduct.description
+             product.image = newProduct.image
+             product.price = newProduct.price
+             product.id = newProduct.id
+             product.rating = newProduct.rating
+             product.title = newProduct.title
+             product.userId = cart.userId
+
+             return(product)
            }))
          
          })
          setCartProducts(newCart)
        }
        
-     }, [products]);
+     }, [products, carts]);
       
      return (
        <div className="grid-container">
@@ -75,7 +132,10 @@ export default function App(props) {
                Carts={Carts}
                approvedProducts={approvedProducts}
                ApprovedTable={ApprovedTable}
-               removeItem={removeItem}              
+               removeItem={removeItem}  
+               increaseQuantity={increaseQuantity}            
+               decreaseQuantity={decreaseQuantity}   
+               checkOut={checkOut}         
                 />
           <Footer />
         </div>

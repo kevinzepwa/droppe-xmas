@@ -5,10 +5,10 @@ export default function Carts(props) {
   return (<div>
     {props.products.length > 1 ? (
       <div className='cart-title'>
-        You have {props.products.length} products in this cart{"."}
+        You have {props.products.length} categories of products in this cart{"."}
       </div>) :
       (<div className='cart-title'>
-        You have {props.products.length} product in this cart{"."}
+        You have 1 category of products in this cart{"."}
     </div>)
     }
 
@@ -31,6 +31,7 @@ export default function Carts(props) {
         </li>
       ))}
     </ul>
-  </div>);
+  </div>
+  );
 }
 
