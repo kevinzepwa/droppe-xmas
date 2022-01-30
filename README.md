@@ -1,20 +1,23 @@
-
 ## Droppe X-mas
 
-- A Custom design Shopping Cart made using HTML, CSS & ReactJs ().
+- A Custom design Shopping Cart made using HTML, CSS & ReactJs.
 
 # Getting Started with This App
 
 To run on the local develpoment server, you need to install npm and node.
 
-### Starting the development server , run: `npm start`
+    - Download project from the repository on GitHub 
+    - Run 'npm install' at projects root to install application
+    - Run 'npm start' to start the development server
+    - Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    The page will reload when you make changes.
 
-The page will reload when you make changes.
+## See it [Live](http://.....)
 
-![alt text](htt......... "the site over view")
+## Screenshot
+<img src="https://....." />
+
 
 ### Flow
 - Atomic design was taken into consideration (Est timeline - 2h).
@@ -41,4 +44,4 @@ The page will reload when you make changes.
 
 ### Deployment
 
-This project was deployed on Netlify. Visit the site on:
+This project was deployed on Netlify. Visit the site on: [Live](http://.....)

@@ -7,8 +7,7 @@ function Checkoutpage(props) {
   const {approvedProducts} = props
 
 
-  return (<div className='checkout'>
-    
+  return (<div className='checkout'> 
     <table className='checkout-table'>
     <tr>
       Check Out
@@ -39,3 +38,5 @@ function Checkoutpage(props) {
 }
 
 export default Checkoutpage;
+
+

@@ -8,12 +8,12 @@ export default function Loading() {
         <text text-anchor="middle" x="50%" y="80%">L o a d i n g . .</text>
       </symbol>
               
-      <g class = "g-ants">
-        <use xlinkHref="#s-text" class="text-copy"></use>
-        <use xlinkHref="#s-text" class="text-copy"></use>
-        <use xlinkHref="#s-text" class="text-copy"></use>
-        <use xlinkHref="#s-text" class="text-copy"></use>
-        <use xlinkHref="#s-text" class="text-copy"></use>
+      <g className = "g-ants">
+        <use xlinkHref="#s-text" className ="text-copy"></use>
+        <use xlinkHref="#s-text" className ="text-copy"></use>
+        <use xlinkHref="#s-text" className ="text-copy"></use>
+        <use xlinkHref="#s-text" className ="text-copy"></use>
+        <use xlinkHref="#s-text" className ="text-copy"></use>
       </g>
       </svg>
     </div>

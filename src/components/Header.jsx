@@ -9,9 +9,9 @@ export default function Header() {
           <h4>Droppe X-mas</h4>
           <ul className='header-links'>
               <li>
-              <div class="dropdown">
+              <div className="dropdown">
               <a href="/">Carts</a>
-                <ul class="dropdown-content">                
+                <ul className="dropdown-content">                
                 <a href="/">Cart 1</a> 
                 <a href="/">Cart 2</a>
                 <a href="/">Cart 3</a>

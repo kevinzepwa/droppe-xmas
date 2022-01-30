@@ -3,7 +3,7 @@ import ApprovedCart from './ApprovedCart'
 import ApprovedTable from './ApprovedTable';
 import Carts from './Carts'
 import Checkoutbutton from './Checkbutton';
-import Checkoutpage from './Checkoutpage';
+// import Checkoutpage from './Checkoutpage';
 import Loading from './Loading'
 
 export default function Main(props) {
@@ -41,7 +41,7 @@ export default function Main(props) {
           <div className="total-title">
               Total: {props.approvedProducts.length ? props.totalPrice : 0 }
         </div>
-        <Checkoutpage  approvedProducts={props.approvedProducts} />
+        {/* <Checkoutpage  approvedProducts={props.approvedProducts} /> */}
         </main>) : 
         <Loading />        
       }

@@ -6,6 +6,9 @@ import ApprovedTable from "./components/ApprovedTable"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Main from "./components/Main"
+import Modal from './components/Modal';
+import useModal from './components/useModal'
+
 
 export default function App(props) {
 
@@ -16,8 +19,7 @@ export default function App(props) {
     const [cartProducts, setCartProducts] = useState([])
     const [approvedProducts, setApprovedProducts] = useState([])
     const [submitted, setSubmitted] = useState(false)
-  
-    const checkOut = () => {
+    const {checkOut, visible} = useModal(() => {
       console.log(approvedProducts)
       const today = new Date().toISOString().slice(0, 10)
 
@@ -46,7 +48,7 @@ export default function App(props) {
         console.log("error", error)
       }
 
-    }
+    });
      
     const approveItem = (product, cartNumber) => {
       const approvedProductsCopy = [...approvedProducts]
@@ -137,6 +139,9 @@ export default function App(props) {
                decreaseQuantity={decreaseQuantity}   
                checkOut={checkOut}         
                 />
+          <div className="App">
+              <Modal visible={visible} checkOut={checkOut} />
+          </div>
           <Footer />
         </div>
       );

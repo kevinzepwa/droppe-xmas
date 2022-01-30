@@ -42,8 +42,8 @@ export default function ApprovedTable(props) {
             </div>}</td>
         <td className="th">{formatCurrency(product.price)}</td>
         <td className="th">{product.quantity}<div className='triangles'>
-                <span class="increase-triangle" onClick={() => props.increaseQuantity(product, cartCount, index)}></span>
-                <span class="decrease-triangle" onClick={() => props.decreaseQuantity(product, cartCount, index)}></span>
+                <span className="increase-triangle" onClick={() => props.increaseQuantity(product, cartCount, index)}></span>
+                <span className="decrease-triangle" onClick={() => props.decreaseQuantity(product, cartCount, index)}></span>
             </div>
         </td>
         <td className="th">{
