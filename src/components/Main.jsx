@@ -4,7 +4,7 @@ import ApprovedTable from './ApprovedTable';
 import Carts from './Carts'
 import Checkoutbutton from './Checkbutton';
 import Checkoutpage from './Checkoutpage';
-import Loading from './Loading'
+import Loading from './Loading';
 
 export default function Main(props) {
   

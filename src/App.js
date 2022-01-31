@@ -5,11 +5,8 @@ import formatCurrency from "./util"
 import ApprovedTable from "./components/ApprovedTable"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-// import Main from "./components/Main"
 import Modal from './components/Modal';
 import useModal from './components/useModal'
-// import Checkoutpage from "./components/Checkoutpage"
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout"
 import Main from "./components/Main"
@@ -25,6 +22,8 @@ export default function App(props) {
     const [cartProducts, setCartProducts] = useState([])
     const [approvedProducts, setApprovedProducts] = useState([])
     const [submitted, setSubmitted] = useState(false)
+
+    
     const {checkOut, visible} = useModal(() => {
       console.log(approvedProducts)
       const today = new Date().toISOString().slice(0, 10)
@@ -156,25 +155,5 @@ export default function App(props) {
       </Routes>
       </BrowserRouter>
 
-
-      //  <div className="grid-container">
-      //    <Header />
-      //    <Main products={products} 
-      //          approveItem={approveItem} 
-      //          cartItems={cartItems} 
-      //          cartNumber={0}
-      //          cartProducts={cartProducts}
-      //          Carts={Carts}
-      //          approvedProducts={approvedProducts}
-      //          ApprovedTable={ApprovedTable}
-      //          removeItem={removeItem}  
-      //          increaseQuantity={increaseQuantity}            
-      //          decreaseQuantity={decreaseQuantity}   
-      //          checkOut={checkOut}         
-      //           />
-      //         {/* <Checkoutpage  approvedProducts={approvedProducts} /> */}
-      //         <Modal visible={visible} checkOut={checkOut} />
-      //     <Footer />
-      //   </div>
       );
 }

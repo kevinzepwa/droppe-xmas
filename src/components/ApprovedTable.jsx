@@ -11,21 +11,6 @@ export default function ApprovedTable(props) {
     const singleProductQuantity = getSingleProductQuantity(approvedProducts, cartCount)
   
 
-    // console.log(totalCartProductQuantity);
-
-    //const [approvedProducts, setApprovedProducts] = useState();
-
-   // useEffect(() => {
-   //     localStorage.setItem(approvedProducts, JSON.stringify(approvedProducts));
-   //   }, [approvedProducts]);
-
-   // const [approvedProducts, setApprovedProducts] = useState(() => {
-   //   // getting stored value
-   //   const saved = localStorage.getItem(approvedProducts);
-   //   const initialValue = JSON.parse(saved);
-   //   return initialValue || "";
-   // });  
-
     return (<div className='approval-table'>
         <table className="table">
         <tr><th className="th">Item</th>

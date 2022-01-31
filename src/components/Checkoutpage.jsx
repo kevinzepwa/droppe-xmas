@@ -1,6 +1,5 @@
 import React from 'react';
 import formatCurrency , {getSingleProductQuantity, getTotalPrice, getTotalCartProductQuantity} from "../util"
-import Checkoutbutton from './Checkbutton';
 
 
 function Checkoutpage(props) {
@@ -35,8 +34,6 @@ function Checkoutpage(props) {
       ,0)}</td>
     </tr>
   </table>
-  {/* <Checkoutbutton checkOut={props.checkOut}/> */}
-
 </div>);
 }
 
