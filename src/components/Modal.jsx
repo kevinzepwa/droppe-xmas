@@ -6,8 +6,9 @@ const Modal = ({ visible, checkOut }) => visible ? ReactDOM.createPortal(
     
     <div className="modal-overlay">
       <div className="modal-pop" role="dialog" aria-modal="true">
-        <div className="check-title"><h3>Check Out</h3></div>
-        <p>Check out Table.</p>
+        <p className="check-p">&#127876;</p>
+        <div className="check-title"><h3>Thank you for Shopping with us.</h3></div>
+        <p className="check-p">Have a Merry Christmas</p>
         <button className="button button-close" type="button" onClick={checkOut}>Close</button>
       </div>  
   </div>    

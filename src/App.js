@@ -5,9 +5,15 @@ import formatCurrency from "./util"
 import ApprovedTable from "./components/ApprovedTable"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import Main from "./components/Main"
+// import Main from "./components/Main"
 import Modal from './components/Modal';
 import useModal from './components/useModal'
+// import Checkoutpage from "./components/Checkoutpage"
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout"
+import Main from "./components/Main"
+import Checkoutpage from "./components/Checkoutpage"
 
 
 export default function App(props) {
@@ -124,25 +130,51 @@ export default function App(props) {
      }, [products]);
       
      return (
-       <div className="grid-container">
-         <Header />
-         <Main products={products} 
-               approveItem={approveItem} 
-               cartItems={cartItems} 
-               cartNumber={0}
-               cartProducts={cartProducts}
-               Carts={Carts}
-               approvedProducts={approvedProducts}
-               ApprovedTable={ApprovedTable}
-               removeItem={removeItem}  
-               increaseQuantity={increaseQuantity}            
-               decreaseQuantity={decreaseQuantity}   
-               checkOut={checkOut}         
-                />
-          
-              <Modal visible={visible} checkOut={checkOut} />
-          
-          <Footer />
-        </div>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<div className="grid-container">
+                 <Main products={products} 
+                       approveItem={approveItem} 
+                       cartItems={cartItems} 
+                       cartNumber={0}
+                       cartProducts={cartProducts}
+                       Carts={Carts}
+                       approvedProducts={approvedProducts}
+                       ApprovedTable={ApprovedTable}
+                       removeItem={removeItem}  
+                       increaseQuantity={increaseQuantity}            
+                       decreaseQuantity={decreaseQuantity}   
+                       checkOut={checkOut}         
+                        />
+                      {/* <Checkoutpage  approvedProducts={approvedProducts} /> */}
+                      <Modal visible={visible} checkOut={checkOut} />
+                  <Footer />
+                </div>} />
+          <Route path="checkoutpage" element={<Checkoutpage  approvedProducts={approvedProducts} />} />
+        </Route>
+      </Routes>
+      </BrowserRouter>
+
+
+      //  <div className="grid-container">
+      //    <Header />
+      //    <Main products={products} 
+      //          approveItem={approveItem} 
+      //          cartItems={cartItems} 
+      //          cartNumber={0}
+      //          cartProducts={cartProducts}
+      //          Carts={Carts}
+      //          approvedProducts={approvedProducts}
+      //          ApprovedTable={ApprovedTable}
+      //          removeItem={removeItem}  
+      //          increaseQuantity={increaseQuantity}            
+      //          decreaseQuantity={decreaseQuantity}   
+      //          checkOut={checkOut}         
+      //           />
+      //         {/* <Checkoutpage  approvedProducts={approvedProducts} /> */}
+      //         <Modal visible={visible} checkOut={checkOut} />
+      //     <Footer />
+      //   </div>
       );
 }

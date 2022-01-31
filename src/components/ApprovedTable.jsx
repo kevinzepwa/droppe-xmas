@@ -11,7 +11,6 @@ export default function ApprovedTable(props) {
     const singleProductQuantity = getSingleProductQuantity(approvedProducts, cartCount)
   
 
-    console.log("******", singleProductQuantity);
     // console.log(totalCartProductQuantity);
 
     //const [approvedProducts, setApprovedProducts] = useState();
