@@ -6,8 +6,9 @@
 
 To run on the local develpoment server, you need to install npm and node.
 
-    - Download project from the repository on GitHub 
+    - Download project from the repository on GitHub
     - Run 'npm install' at projects root to install application
+    - Add React Router by running 'npm i -D react-router-dom' in the root
     - Run 'npm start' to start the development server
     - Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
@@ -32,14 +33,29 @@ To run on the local develpoment server, you need to install npm and node.
 - JavaScript | Reactjs
 
 
-### Implementation
+## Implementation
 
-- 5 carts were pulled from the API—one per child, it is visible which cart is which childs
-- The user can interact with these carts in an intuitive way to manage spending per child
-- The user gets a discount if there are identical products on the childrens carts and the user approves these wishes
--   2 identical products chosen => 20% reduction for the sum of those two items
--   3 identical products chosen => 30% reduction — these reduction rules are handled on the client
--When the user has made the final choices of approving certain products, these choices are shown in different carts.
+## Folder Structure
+src:
+- Components
+    - ApprovedTable
+    - Checkbutton
+    - Checkoutpage
+    - Layout
+    - Main
+    - Modal
+- App.js
+- index.css
+- utils.js
+
+### work-up:
+
+    - 5 carts were pulled from the API—one per child, it is visible which cart is which childs
+    - The user can interact with these carts in an intuitive way to manage spending per child
+    - The user gets a discount if there are identical products on the childrens carts and the user approves these wishes
+    -   2 identical products chosen => 20% reduction for the sum of those two items
+    -   3 identical products chosen => 30% reduction — these reduction rules are handled on the client
+    -When the user has made the final choices of approving certain products, these choices are shown in different carts.
 
 
 ### Deployment
