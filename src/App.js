@@ -3,7 +3,6 @@ import ApprovedCart from "./components/ApprovedCart"
 import Carts from "./components/Carts"
 import formatCurrency from "./util"
 import ApprovedTable from "./components/ApprovedTable"
-import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Modal from './components/Modal';
 import useModal from './components/useModal'

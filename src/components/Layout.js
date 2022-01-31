@@ -17,20 +17,10 @@ const Layout = () => {
                 </a>
             </li>
             <li>
-              <Link to="/checkoutpage">Check Out</Link>
+              <Link to="/checkoutpage">Check-out</Link>
           </li>
           </ul>
         </header>
-      {/* <header>
-        <ul> 
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/checkoutpage">Check Out</Link>
-          </li>
-        </ul>
-        </header> */}
       <Outlet />
     </>
   )
