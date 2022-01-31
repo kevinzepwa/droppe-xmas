@@ -121,7 +121,7 @@ export default function App(props) {
          setCartProducts(newCart)
        }
        
-     }, [products, carts]);
+     }, [products]);
       
      return (
        <div className="grid-container">
@@ -139,9 +139,9 @@ export default function App(props) {
                decreaseQuantity={decreaseQuantity}   
                checkOut={checkOut}         
                 />
-          <div className="App">
+          
               <Modal visible={visible} checkOut={checkOut} />
-          </div>
+          
           <Footer />
         </div>
       );

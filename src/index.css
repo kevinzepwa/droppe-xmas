@@ -406,8 +406,8 @@ table th {
   border: 2px solid #aaa;
   border-radius: 1.8rem;  
   z-index: 999;
-  max-width: 75%;
-  height: 55vh;
+  width: 75%;
+  height: 65%;
   margin: auto;
   padding: 1em 2em 2em;
   position: relative;
