@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+## Droppe X-mas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- A Custom design Shopping Cart made using HTML, CSS & ReactJs.
 
-## Available Scripts
+# Getting Started with This App
 
-In the project directory, you can run:
+To run on the local develpoment server, you need to install npm and node.
 
-### `npm start`
+    - Download project from the repository on GitHub 
+    - Run 'npm install' at projects root to install application
+    - Run 'npm start' to start the development server
+    - Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    The page will reload when you make changes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## See it [Live](http://.....)
 
-### `npm test`
+## Screenshot
+<img src="https://....." />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Flow
+- Atomic design was taken into consideration (Est timeline - 2h).
+- React components have been implemented for the Product carts, Content, Sidbar and the Footer (Est timeline - 2h).
+- React hooks were used to manage the component state (Est timeline - 2.5h).
+- Simple animations have been created using CSS (Est timeline - 2h).
+- The project was published on Netlify (Est timeline - 15 min)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Technologies used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- HTML & CSS
+- JavaScript | Reactjs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Implementation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- 5 carts were pulled from the API—one per child, it is visible which cart is which childs
+- The user can interact with these carts in an intuitive way to manage spending per child
+- The user gets a discount if there are identical products on the childrens carts and the user approves these wishes
+-   2 identical products chosen => 20% reduction for the sum of those two items
+-   3 identical products chosen => 30% reduction — these reduction rules are handled on the client
+-When the user has made the final choices of approving certain products, these choices are shown in different carts.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was deployed on Netlify. Visit the site on: [Live](http://.....)
