@@ -32,8 +32,8 @@ export default function ApprovedTable(props) {
         </td>
         <td className="th">{
             product.quantity === 1 ? formatCurrency(product.price * product.quantity) : 
-            product.quantity === 2 ? formatCurrency(product.price * 0.8 *product.quantity) : 
-            formatCurrency(product.price * 0.7 *product.quantity) 
+            product.quantity === 2 ? formatCurrency(product.price * 0.80 * product.quantity) : 
+            formatCurrency(product.price * 0.70 * product.quantity) 
             }
         </td>
         <td className="th">

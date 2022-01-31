@@ -4,7 +4,7 @@ import React from 'react';
 function Checkoutbutton(props) {
   return (<div>
       <button className="button chekout-button"
-               onClick={props.checkOut}>
+               onClick={props.submit}>
                 Proceed
         </button >
         {/* <Modal visible={props.visible} checkOut={props.checkOut} /> */}

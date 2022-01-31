@@ -23,7 +23,9 @@ export default function App(props) {
     const [submitted, setSubmitted] = useState(false)
 
     
-    const {checkOut, visible} = useModal(() => {
+    const {checkOut, visible} = useModal();
+    
+    const submit = () => {
       console.log(approvedProducts)
       const today = new Date().toISOString().slice(0, 10)
 
@@ -39,20 +41,22 @@ export default function App(props) {
           method:"POST",
           body:JSON.stringify(
               {
-                  userId:5,
+                  userId:payload.userId,
                   date: today,
-                  products:[{productId:5,quantity:1},{productId:1,quantity:5}]
+                  products: payload.products.map(item => ({productId: item.productId, quantity: item.quantity}))
               }
           )
         })
             .then(res=>res.json())
-            .then(json=> setSubmitted(true))
+            .then(json=> {
+              console.log("json", json)
+              checkOut()})
         )
       } catch (error) {
         console.log("error", error)
       }
 
-    });
+    }
      
     const approveItem = (product, cartNumber) => {
       const approvedProductsCopy = [...approvedProducts]
@@ -144,6 +148,7 @@ export default function App(props) {
                        increaseQuantity={increaseQuantity}            
                        decreaseQuantity={decreaseQuantity}   
                        checkOut={checkOut}         
+                       submit={submit}         
                         />
                       {/* <Checkoutpage  approvedProducts={approvedProducts} /> */}
                       <Modal visible={visible} checkOut={checkOut} />

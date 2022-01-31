@@ -35,7 +35,7 @@ export default function Main(props) {
                                   "No Products in Cart"
                   }
               </div>
-              <Checkoutbutton checkOut={props.checkOut}/>
+              <Checkoutbutton submit={props.submit}/>
             </div>
           </div>
           <div className="total-title">

@@ -69,6 +69,14 @@ a:hover{
   color: #4ac900;
 }
 
+.checkout-table th tr,
+.modal-overlay,
+.footer   {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* GENERAL END */
 
 /* HEADER */
@@ -169,10 +177,17 @@ header ul li a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 1.5rem;
+  margin: 1.5rem 5.5rem;
   background-color: #fff;
   border: #344612 2px solid;
   padding: 1rem;
+  border-radius: 1rem;
+}
+
+.product:hover {
+  box-shadow: 12px 8px 16px 1px #6e6e6e;
+  transition: .5s;
+  border-radius: 1.5rem;
 }
 
 .product-title {
@@ -208,7 +223,7 @@ header ul li a {
   font-weight: 600;
   border-radius: 2rem;
   background-color: #5a8a00;
-  box-shadow: 12px 8px 16px 1px rgba(0, 26, 54, 0.35);
+  box-shadow: 12px 8px 16px 1px #00000059;
   cursor: pointer;
   width: 98%;
   overflow: hidden;
@@ -217,6 +232,7 @@ header ul li a {
 .button:hover {
   border: 0.1rem #808080 solid;
   background-color: #ffeeee;
+  box-shadow: 12px 8px 16px 1px #ff3eae59;
   color: #000;
   transition: 0.5s;
 }
@@ -236,6 +252,9 @@ header ul li a {
 .remove-button:hover{
   color: #f87171;
   background: #d9f3d9;
+  border-radius: 25%;
+  box-shadow: 12px 8px 16px 1px #636363;
+  transition: 0.5s;
 }
 
 /* MAIN  END*/
@@ -403,16 +422,7 @@ table th {
   color: #5a8a00;
 }
 
-.checkout-table th tr {
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-}
-
 .checkout-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 3.5rem;
   font-weight: 800;
   text-decoration: underline;
@@ -423,8 +433,8 @@ table th {
   border: 2px solid #aaa;
   border-radius: 1.8rem;  
   z-index: 999;
-  width: 75%;
-  height: 65%;
+  width: 65%;
+  height: 98%;
   margin: auto;
   padding: 1em 2em 2em;
   position: relative;
@@ -443,13 +453,10 @@ table th {
   z-index: 99;
   background-color: #9e9595;
   opacity: .95;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .button-close {
-  width: 15%;
+  width: 45%;
   overflow: visible;
 }
 
@@ -465,14 +472,11 @@ table th {
 /* PROCEED MODAL end */
 
 /* FOOTER */
-footer{
+footer {
   grid-area: footer;
   height: 7rem;
   color: #fff;
   background-color: #062e07;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* FOOTER END */
