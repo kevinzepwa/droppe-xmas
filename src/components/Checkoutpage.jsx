@@ -10,7 +10,7 @@ function Checkoutpage(props) {
   return (<div className='checkout'> 
     <table className='checkout-table'>
     <tr className='checkout-title'>
-      Check Out
+      Check-Out
     </tr>  
     <tr>
       <th>Carts</th>
