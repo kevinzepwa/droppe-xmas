@@ -60,4 +60,4 @@ src:
 
 ### Deployment
 
-This project was deployed on Netlify. Visit the site on: [Live](https://droppe-gift-cart.netlify.app/)
+This project was deployed to Netlify. Visit the site on: [Live](https://droppe-gift-cart.netlify.app/)
